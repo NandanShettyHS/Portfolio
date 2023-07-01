@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpeg" alt="logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a> </li>
+                    <li><a href="#about">ABOUT</a> </li>
+                    <li><a href="#project">PROJECT</a> </li>
+                    <li><a href="#contact">CONTACT</a> </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi, I'm <span>Nandan Shetty H S</span> </h1>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------about------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="nameabout">ABOUT ME</h1>
+                    <p>I am Nandan Shetty H S 22 year old native from sakleshpur,Hassan.Persuing my Engineering<br>
+                        in SDM Institute of Technology under Computer science branch and working towards upskilling<br> myself 
+                    to be a full stack developer.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>JAVASCRIPT</span></li>
+                            <li><span>PYTHON</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Schooling</span><br>JSS Public School ,Bage<br>SSLC:72%</li>
+                            <li><span>PUC</span><br>Ambika Padavi Poorva COllege<br>2nd PUC:83%</li>
+                            <li><span>Engineering</span><br>SDM Institute of Technology<br>Upto 5th sem cgpa:8.3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------------project-------------------------- -->
+   <div id="project">
+    <div class="container">
+        <h1 class="sub-title">PROJECT</h1>
+        <div class="projectlist">
+            <div class="project">
+                <img src="images/projectimg1.png" >
+                <div class="layer">
+                    <h3>DBMS Project</h3>
+                    <p>This is a functional project based on social networking 
+                        service 'Twitter'
+                    </p>
+                    <a href=""><i class="fa-solid fa-pen-fancy"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+    <!-- -----------------contact---------------- -->
+    <div id="contact">
+          <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>nandanshetty.hs27@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8310433062</p>
+                    <div class="social-icons">
+                       <a href="https://twitter.com/NandanShettyHS"><i class="fa-brands fa-twitter"></i></a>
+                       <a href="https://www.instagram.com/nandan_shetty_h_s/"><i class="fa-brands fa-instagram"></i></a>
+                       <a href="https://www.linkedin.com/in/nandan-shetty-h-s-b33142226/"><i class="fa-brands fa-linkedin"></i></a>
+                       <a href="https://github.com/NandanShettyHS"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <br>
+                    <br>
+                    <div>
+                    <a href="resume/nandan shetty hs.pdf" download class="btn">Download Resume</a>
+                </div>
+                </div>
+                <div class="contact-right">
+                    <form action="https://formsubmit.co/nandanshetty.hs27@gmail.com" method="POST">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <input type="submit" class="btn">
+                        <input type="reset" class="btn">
+                    </form>
+                </div>
+            </div>
+          </div>
+          <div class="thank">
+            <p>Thank You for Visiting <i class="fa-solid fa-face-smile"></i></p>
+          </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents")
+         function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+         }
+    </script>
+</body>
+</html>
